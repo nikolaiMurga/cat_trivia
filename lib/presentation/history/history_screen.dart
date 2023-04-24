@@ -3,6 +3,7 @@ import 'package:cat_trivia/presentation/common/widgets/loading_indicator.dart';
 import 'package:cat_trivia/presentation/history/bloc/history_cubit.dart';
 import 'package:cat_trivia/presentation/history/widgets/facts_list.dart';
 import 'package:cat_trivia/resources/app_colors.dart';
+import 'package:cat_trivia/resources/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,6 +15,8 @@ class HistoryScreen extends StatelessWidget with ToastMixin {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.grey,
+        title: const Text(AppStrings.history),
+        centerTitle: true,
       ),
       body: BlocConsumer<HistoryCubit, HistoryState>(
         listener: (context, state) {
