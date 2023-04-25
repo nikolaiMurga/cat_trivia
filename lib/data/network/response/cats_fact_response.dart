@@ -1,13 +1,13 @@
-class RandomFactResponse {
+class CatsFactResponse {
   String? text;
   String? createdAt;
 
-  RandomFactResponse({
+  CatsFactResponse({
     this.text,
     this.createdAt,
   });
 
-  RandomFactResponse.fromJson(Map<String, dynamic> json) {
+  CatsFactResponse.fromJson(Map<String, dynamic> json) {
     text = json['text'];
     createdAt = json['createdAt'];
   }

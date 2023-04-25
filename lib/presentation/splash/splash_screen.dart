@@ -21,13 +21,9 @@ class SplashScreen extends StatelessWidget {
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state is SplashSucceed) _navigation.clearPush(context, const RandomPage());
-
         },
-        child: Center(
-          child: Text(AppStrings.catTrivia.toUpperCase(), style: AppStyles.mainTextStyle),
-        ),
+        child: Center(child: Text(AppStrings.catTrivia.toUpperCase(), style: AppStyles.mainTextStyle)),
       ),
     );
   }
 }
-

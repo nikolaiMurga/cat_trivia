@@ -19,13 +19,13 @@ class _ApiClient implements ApiClient {
   String? baseUrl;
 
   @override
-  Future<RandomFactResponse> fetchRandomCatsFact() async {
+  Future<CatsFactResponse> fetchCatsFact() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<RandomFactResponse>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<CatsFactResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -37,18 +37,18 @@ class _ApiClient implements ApiClient {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = RandomFactResponse.fromJson(_result.data!);
+    final value = CatsFactResponse.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<List<ImageDto>> fetchCatImage() async {
+  Future<List<CatsImageDto>> fetchCatsImage() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<ImageDto>>(Options(
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<CatsImageDto>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -61,7 +61,7 @@ class _ApiClient implements ApiClient {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => ImageDto.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => CatsImageDto.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }

@@ -26,6 +26,7 @@ class Content extends StatelessWidget {
         children: [
           Expanded(
             child: SingleChildScrollView(
+
               child: Column(
                 children: [
                   CatImage(imageUrl: imageUrl),

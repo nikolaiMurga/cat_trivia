@@ -11,20 +11,20 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:cat_trivia/app/modules/api_module.dart' as _i14;
 import 'package:cat_trivia/data/network/api_client.dart' as _i3;
-import 'package:cat_trivia/data/repo/mapper/fact_mapper.dart' as _i4;
-import 'package:cat_trivia/data/repo/mapper/image_mapper.dart' as _i5;
-import 'package:cat_trivia/data/repo/random_fact/random_fact_local_repo.dart'
-    as _i7;
-import 'package:cat_trivia/data/repo/random_fact/random_fact_network_repo.dart'
-    as _i8;
-import 'package:cat_trivia/data/repo/random_fact/random_fact_repo_impl.dart'
-    as _i10;
-import 'package:cat_trivia/domain/repo/random_fact_repo.dart' as _i9;
-import 'package:cat_trivia/presentation/common/helpers/navigation.dart' as _i6;
+import 'package:cat_trivia/data/repo/cats_fact/cats_fact_local_repo.dart'
+    as _i9;
+import 'package:cat_trivia/data/repo/cats_fact/cats_fact_network_repo.dart'
+    as _i5;
+import 'package:cat_trivia/data/repo/cats_fact/cats_fact_repo_impl.dart'
+    as _i11;
+import 'package:cat_trivia/data/repo/mapper/cats_fact_mapper.dart' as _i4;
+import 'package:cat_trivia/data/repo/mapper/cats_image_mapper.dart' as _i6;
+import 'package:cat_trivia/domain/repo/cats_fact_repo.dart' as _i10;
+import 'package:cat_trivia/presentation/common/helpers/navigation.dart' as _i7;
 import 'package:cat_trivia/presentation/history/bloc/history_cubit.dart'
     as _i12;
 import 'package:cat_trivia/presentation/random/bloc/random_cubit.dart' as _i13;
-import 'package:cat_trivia/presentation/splash/bloc/splash_cubit.dart' as _i11;
+import 'package:cat_trivia/presentation/splash/bloc/splash_cubit.dart' as _i8;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -41,26 +41,26 @@ extension GetItInjectableX on _i1.GetIt {
     );
     final apiModule = _$ApiModule();
     gh.lazySingleton<_i3.ApiClient>(() => apiModule.apiClient);
-    gh.factory<_i4.FactMapper>(() => _i4.FactMapper());
-    gh.factory<_i5.ImageMapper>(() => _i5.ImageMapper());
-    gh.lazySingleton<_i6.Navigation>(() => _i6.Navigation());
-    gh.factory<_i7.RandomFactLocalRepo>(
-        () => _i7.RandomFactLocalRepo(gh<_i4.FactMapper>()));
-    gh.factory<_i8.RandomFactNetworkRepo>(() => _i8.RandomFactNetworkRepo(
+    gh.factory<_i4.CatsFactMapper>(() => _i4.CatsFactMapper());
+    gh.factory<_i5.CatsFactNetworkRepo>(() => _i5.CatsFactNetworkRepo(
           gh<_i3.ApiClient>(),
-          gh<_i4.FactMapper>(),
+          gh<_i4.CatsFactMapper>(),
         ));
-    gh.lazySingleton<_i9.RandomFactRepo>(() => _i10.RandomFactRepoImpl(
-          gh<_i8.RandomFactNetworkRepo>(),
-          gh<_i7.RandomFactLocalRepo>(),
-          gh<_i4.FactMapper>(),
-          gh<_i5.ImageMapper>(),
+    gh.factory<_i6.CatsImageMapper>(() => _i6.CatsImageMapper());
+    gh.lazySingleton<_i7.Navigation>(() => _i7.Navigation());
+    gh.factory<_i8.SplashCubit>(() => _i8.SplashCubit());
+    gh.factory<_i9.CatsFactLocalRepo>(
+        () => _i9.CatsFactLocalRepo(gh<_i4.CatsFactMapper>()));
+    gh.lazySingleton<_i10.CatsFactRepo>(() => _i11.CatsFactRepoImpl(
+          gh<_i5.CatsFactNetworkRepo>(),
+          gh<_i9.CatsFactLocalRepo>(),
+          gh<_i4.CatsFactMapper>(),
+          gh<_i6.CatsImageMapper>(),
         ));
-    gh.factory<_i11.SplashCubit>(() => _i11.SplashCubit());
     gh.factory<_i12.HistoryCubit>(
-        () => _i12.HistoryCubit(gh<_i9.RandomFactRepo>()));
+        () => _i12.HistoryCubit(gh<_i10.CatsFactRepo>()));
     gh.factory<_i13.RandomCubit>(
-        () => _i13.RandomCubit(gh<_i9.RandomFactRepo>()));
+        () => _i13.RandomCubit(gh<_i10.CatsFactRepo>()));
     return this;
   }
 }
