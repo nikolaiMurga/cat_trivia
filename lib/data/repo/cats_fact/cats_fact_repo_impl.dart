@@ -2,8 +2,8 @@ import 'package:cat_trivia/data/repo/cats_fact/cats_fact_local_repo.dart';
 import 'package:cat_trivia/data/repo/cats_fact/cats_fact_network_repo.dart';
 import 'package:cat_trivia/data/repo/mapper/cats_fact_mapper.dart';
 import 'package:cat_trivia/data/repo/mapper/cats_image_mapper.dart';
-import 'package:cat_trivia/domain/models/fact_model.dart';
-import 'package:cat_trivia/domain/models/image_model.dart';
+import 'package:cat_trivia/domain/models/cats_fact_model.dart';
+import 'package:cat_trivia/domain/models/cats_image_model.dart';
 import 'package:cat_trivia/domain/repo/cats_fact_repo.dart';
 import 'package:injectable/injectable.dart';
 
@@ -29,7 +29,7 @@ class CatsFactRepoImpl extends CatsFactRepo {
   }
 
   @override
-  Future<ImageModel> fetchCatsImage() async {
+  Future<CatsImageModel> fetchCatsImage() async {
     try {
       final dto = await _catsFactNetworkRepo.fetchCatsImage();
       final model = _catsImageMapper.fromDto(dto);

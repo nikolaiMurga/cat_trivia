@@ -1,6 +1,6 @@
 import 'package:cat_trivia/data/db/entities/cats_fact_entity.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 
 class HiveBoxes {
   static const catsFactBox = 'cats_fact_box';
