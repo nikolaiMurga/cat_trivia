@@ -5,7 +5,7 @@ abstract class HistoryState {}
 class HistoryInitial extends HistoryState {}
 class HistoryLoading extends HistoryState {}
 class HistorySucceed extends HistoryState {
-  final List<FactModel> list;
+  final List<CatsFactModel> list;
 
   HistorySucceed({required this.list});
 }

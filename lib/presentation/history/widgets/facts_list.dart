@@ -5,7 +5,7 @@ import 'package:cat_trivia/resources/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class FactsList extends StatelessWidget {
-  final List<FactModel> list;
+  final List<CatsFactModel> list;
 
   const FactsList({required this.list, Key? key}) : super(key: key);
 

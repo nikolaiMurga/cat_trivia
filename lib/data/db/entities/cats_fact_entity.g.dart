@@ -1,29 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'fact_entity.dart';
+part of 'cats_fact_entity.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class FactEntityAdapter extends TypeAdapter<FactEntity> {
+class CatsFactEntityAdapter extends TypeAdapter<CatsFactEntity> {
   @override
   final int typeId = 0;
 
   @override
-  FactEntity read(BinaryReader reader) {
+  CatsFactEntity read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return FactEntity(
+    return CatsFactEntity(
       text: fields[0] as String,
       createdAt: fields[1] as String,
     );
   }
 
   @override
-  void write(BinaryWriter writer, FactEntity obj) {
+  void write(BinaryWriter writer, CatsFactEntity obj) {
     writer
       ..writeByte(2)
       ..writeByte(0)
@@ -38,7 +38,7 @@ class FactEntityAdapter extends TypeAdapter<FactEntity> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is FactEntityAdapter &&
+      other is CatsFactEntityAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

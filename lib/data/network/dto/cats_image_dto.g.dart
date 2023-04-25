@@ -1,15 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'image_dto.dart';
+part of 'cats_image_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ImageDto _$ImageDtoFromJson(Map<String, dynamic> json) => ImageDto(
+CatsImageDto _$CatsImageDtoFromJson(Map<String, dynamic> json) => CatsImageDto(
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$ImageDtoToJson(ImageDto instance) => <String, dynamic>{
+Map<String, dynamic> _$CatsImageDtoToJson(CatsImageDto instance) =>
+    <String, dynamic>{
       'url': instance.url,
     };
