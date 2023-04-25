@@ -1,6 +1,6 @@
 import 'package:cat_trivia/data/db/persistence_helper.dart';
 import 'package:cat_trivia/data/repo/mapper/cats_fact_mapper.dart';
-import 'package:cat_trivia/domain/models/fact_model.dart';
+import 'package:cat_trivia/domain/models/cats_fact_model.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 

@@ -1,4 +1,4 @@
-import 'package:cat_trivia/domain/models/fact_model.dart';
+import 'package:cat_trivia/domain/models/cats_fact_model.dart';
 import 'package:cat_trivia/presentation/common/widgets/date_formatter.dart';
 import 'package:cat_trivia/resources/app_colors.dart';
 import 'package:cat_trivia/resources/app_styles.dart';

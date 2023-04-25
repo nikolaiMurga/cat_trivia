@@ -1,6 +1,6 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cat_trivia/domain/models/fact_model.dart';
+import 'package:cat_trivia/domain/models/cats_fact_model.dart';
 import 'package:cat_trivia/domain/repo/cats_fact_repo.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
 part 'history_state.dart';

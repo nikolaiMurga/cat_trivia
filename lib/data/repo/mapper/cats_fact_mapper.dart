@@ -1,7 +1,7 @@
 import 'package:cat_trivia/data/db/entities/cats_fact_entity.dart';
 import 'package:cat_trivia/data/network/dto/cats_fact_dto.dart';
 import 'package:cat_trivia/data/network/response/cats_fact_response.dart';
-import 'package:cat_trivia/domain/models/fact_model.dart';
+import 'package:cat_trivia/domain/models/cats_fact_model.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
