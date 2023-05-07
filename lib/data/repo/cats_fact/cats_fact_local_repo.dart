@@ -4,7 +4,7 @@ import 'package:cat_trivia/domain/models/cats_fact_model.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
+@LazySingleton()
 class CatsFactLocalRepo {
   final CatsFactMapper _catsFactMapper;
   final _factKey = 'fact';

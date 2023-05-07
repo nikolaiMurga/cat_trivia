@@ -42,14 +42,14 @@ extension GetItInjectableX on _i1.GetIt {
     final apiModule = _$ApiModule();
     gh.lazySingleton<_i3.ApiClient>(() => apiModule.apiClient);
     gh.factory<_i4.CatsFactMapper>(() => _i4.CatsFactMapper());
-    gh.factory<_i5.CatsFactNetworkRepo>(() => _i5.CatsFactNetworkRepo(
+    gh.lazySingleton<_i5.CatsFactNetworkRepo>(() => _i5.CatsFactNetworkRepo(
           gh<_i3.ApiClient>(),
           gh<_i4.CatsFactMapper>(),
         ));
     gh.factory<_i6.CatsImageMapper>(() => _i6.CatsImageMapper());
     gh.lazySingleton<_i7.Navigation>(() => _i7.Navigation());
     gh.factory<_i8.SplashCubit>(() => _i8.SplashCubit());
-    gh.factory<_i9.CatsFactLocalRepo>(
+    gh.lazySingleton<_i9.CatsFactLocalRepo>(
         () => _i9.CatsFactLocalRepo(gh<_i4.CatsFactMapper>()));
     gh.lazySingleton<_i10.CatsFactRepo>(() => _i11.CatsFactRepoImpl(
           gh<_i5.CatsFactNetworkRepo>(),
