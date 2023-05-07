@@ -4,7 +4,7 @@ import 'package:cat_trivia/data/network/dto/cats_image_dto.dart';
 import 'package:cat_trivia/data/repo/mapper/cats_fact_mapper.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
+@LazySingleton()
 class CatsFactNetworkRepo {
   final ApiClient _apiClient;
   final CatsFactMapper _catsFactMapper;

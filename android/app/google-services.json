@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "254799099081",
+    "project_id": "cat-trivia-31cfb",
+    "storage_bucket": "cat-trivia-31cfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254799099081:android:faccee5728c69349788918",
+        "android_client_info": {
+          "package_name": "com.example.cat_trivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254799099081-5fv9en6n5drg69n280klov7nddpofsei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnMdSjPRGAgtXDqDr7vh5_gEcL7KQja7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254799099081-5fv9en6n5drg69n280klov7nddpofsei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
